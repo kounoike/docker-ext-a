@@ -1,3 +1,3 @@
 # coding: utf-8
 
-print(42)
+print("I'm docker-extA")
