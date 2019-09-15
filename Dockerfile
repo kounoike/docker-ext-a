@@ -4,4 +4,4 @@ ADD app /app
 WORKDIR /app
 RUN python3 app.py
 
-CMD "python3 app.py"
+CMD [ "python3", "app.py" ]
