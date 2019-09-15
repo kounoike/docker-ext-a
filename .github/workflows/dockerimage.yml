@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Generate the tag for current build
-      run: export TAG=${GITHUB_REF#refs/*/}; echo docker.pkg.github.com/${{ github.repository }}/docker-extA:${TAG/master/latest} > /tmp/tag-for-docker.txt
+      run: export TAG=${GITHUB_REF#refs/*/}; echo docker.pkg.github.com/${{ github.repository }}/docker-ext-a:${TAG/master/latest} > /tmp/tag-for-docker.txt
     - name: Build the Docker image
       run: docker build --tag $(cat /tmp/tag-for-docker.txt) .
     - name: Login to GitHub Package Registry
